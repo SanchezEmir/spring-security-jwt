@@ -7,7 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
 
 import static javax.persistence.FetchType.*;
 import static javax.persistence.GenerationType.*;
@@ -26,11 +26,11 @@ public class User {
 
     private String name;
 
-    private String userName;
+    private String username;
 
     private String password;
 
     @ManyToMany(fetch = EAGER)
-    private List<Role> roles = new ArrayList<>();
+    private Collection<Role> roles = new ArrayList<>();
 
 }

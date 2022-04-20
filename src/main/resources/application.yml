@@ -1,12 +1,15 @@
+server:
+  port: 8080
+
 spring:
+
   datasource:
-    url: jdbc:h2:mem:db;DB_CLOSE_ON_EXIT=FALSE
-    username: sa
-    password: sa
-    driver-class-name: org.h2.Driver
-  h2:
-    console:
-      enabled: true
-      path: /h2-console
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://ec2-23-20-224-166.compute-1.amazonaws.com:5432/d6t791aea18v77
+    username: rdtfoyjmksmmga
+    password: 343aad3b1704a28e8b0ac5bc6d102dff7a9ff44455a3dcbaf55a7744f6055f25
+
   jpa:
     show-sql: true
+    hibernate:
+      ddl-auto: create-drop
