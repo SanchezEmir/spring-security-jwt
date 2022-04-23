@@ -4,12 +4,20 @@ server:
 spring:
 
   datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://ec2-23-20-224-166.compute-1.amazonaws.com:5432/d6t791aea18v77
-    username: rdtfoyjmksmmga
-    password: 343aad3b1704a28e8b0ac5bc6d102dff7a9ff44455a3dcbaf55a7744f6055f25
+    #driver-class-name: org.postgresql.Driver
+    #url: jdbc:postgresql://ec2-23-20-224-166.compute-1.amazonaws.com:5432/d6t791aea18v77
+    #username: rdtfoyjmksmmga
+    #password: 343aad3b1704a28e8b0ac5bc6d102dff7a9ff44455a3dcbaf55a7744f6055f25
+    driver-class-name:
+    url: jdbc:mysql://localhost:3306/security
+    username: root
+    password: root
 
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
+    database: MYSQL
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
